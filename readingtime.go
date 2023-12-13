@@ -1,3 +1,10 @@
+/*
+ go-readingtime - Estimate how long it takes to read a text
+
+ https://github.com/edoardottt/go-readingtime
+
+*/
+
 package readingtime
 
 import (
