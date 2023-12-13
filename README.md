@@ -42,18 +42,14 @@ import reading "github.com/edoardottt/go-readingtime"
 
 func main() {
     t := reading.RawEstimate(`Lorem ipsum dolor sit amet, consectetur...`)
-    fmt.Println(t)
+    fmt.Println(t) // 2m0s
 
     t := reading.Estimate(`Lorem ipsum dolor sit amet, consectetur...`)
-    fmt.Println(t)
+    fmt.Println(t) // 2 minutes
 }
 ```
 
-Output:
-
-```console
-
-```
+Read the [`package documentation here`](https://pkg.go.dev/github.com/edoardottt/go-readingtime).
 
 Changelog 📌
 -------
