@@ -38,17 +38,21 @@ Usage 💡
 ```go
 package main
 
-import reading "github.com/edoardottt/go-readingtime"
+import (
+ "fmt"
+
+ reading "github.com/edoardottt/go-readingtime"
+)
 
 func main() {
-    t := reading.RawEstimate(`Lorem ipsum dolor sit amet, consectetur...`)
-    fmt.Println(t) // 120
+ s := reading.RawEstimate(`Lorem ipsum dolor sit amet, consectetur...`)
+ fmt.Println(s) // 130
 
-    t := reading.Estimate(`Lorem ipsum dolor sit amet, consectetur...`)
-    fmt.Println(t) // 2m0s
+ d := reading.Estimate(`Lorem ipsum dolor sit amet, consectetur...`)
+ fmt.Println(d) // 2m10s
 
-    t := reading.HumanEstimate(`Lorem ipsum dolor sit amet, consectetur...`)
-    fmt.Println(t) // 2 minutes
+ h := reading.HumanEstimate(`Lorem ipsum dolor sit amet, consectetur...`)
+ fmt.Println(h) // 2 minutes
 }
 ```
 
