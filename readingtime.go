@@ -23,11 +23,29 @@ const (
 	exceedMinute    = 30
 )
 
-// Estimate returns a string represting a humanly readable
+// RawEstimate returns a float64 (seconds) represting an
 // estimation of how long it would take to read the input text.
-func Estimate(input string) string {
+func RawEstimate(input string) float64 {
+	words := strings.Fields(input)
+	minutes := len(words) / wpm
+	seconds := len(words) % wpm
+	f := float64(minutes*secondsInMinute + durationLessThanAMinute(seconds))
+
+	return f
+}
+
+// Estimate returns a time.Duration object represting an
+// estimation of how long it would take to read the input text.
+func Estimate(input string) time.Duration {
+	f := RawEstimate(input)
+	return duration(f)
+}
+
+// HumanEstimate returns a string represting a humanly readable
+// estimation of how long it would take to read the input text.
+func HumanEstimate(input string) string {
 	var (
-		rawMinutes = RawEstimate(input).Minutes()
+		rawMinutes = Estimate(input).Minutes()
 		fmtResult  = "%s minute"
 	)
 
@@ -38,17 +56,6 @@ func Estimate(input string) string {
 	}
 
 	return fmt.Sprintf(fmtResult, strconv.Itoa(intResult))
-}
-
-// RawEstimate returns a time.Time object represting an
-// estimation of how long it would take to read the input text.
-func RawEstimate(input string) time.Duration {
-	words := strings.Fields(input)
-	minutes := len(words) / wpm
-	seconds := len(words) % wpm
-	f := float64(minutes*secondsInMinute + durationLessThanAMinute(seconds))
-
-	return duration(f)
 }
 
 func duration(f float64) time.Duration {
