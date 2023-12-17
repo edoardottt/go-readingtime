@@ -23,7 +23,7 @@ const (
 	exceedMinute    = 30
 )
 
-// RawEstimate returns a float64 (seconds) represting an
+// RawEstimate returns a float64 (seconds) representing an
 // estimation of how long it would take to read the input text.
 func RawEstimate(input string) float64 {
 	words := strings.Fields(input)
@@ -34,14 +34,14 @@ func RawEstimate(input string) float64 {
 	return f
 }
 
-// Estimate returns a time.Duration object represting an
+// Estimate returns a time.Duration object representing an
 // estimation of how long it would take to read the input text.
 func Estimate(input string) time.Duration {
 	f := RawEstimate(input)
 	return duration(f)
 }
 
-// HumanEstimate returns a string represting a humanly readable
+// HumanEstimate returns a string representing a humanly readable
 // estimation of how long it would take to read the input text.
 func HumanEstimate(input string) string {
 	var (
