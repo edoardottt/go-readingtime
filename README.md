@@ -29,11 +29,19 @@ Install 📡
 ----------
 
 ```console
-go get github.com/edoardottt/go-readingtime
+go install github.com/edoardottt/go-readingtime/cmd/readt@latest
 ```
 
 Usage 💡
 ----------
+
+CLI tool
+
+```console
+readt <filepath>
+```
+
+Golang module
 
 ```go
 package main
