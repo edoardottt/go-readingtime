@@ -8,8 +8,12 @@ import (
 	reading "github.com/edoardottt/go-readingtime"
 )
 
+const (
+	argsNumber = 2
+)
+
 func main() {
-	if len(os.Args) != 2 {
+	if len(os.Args) != argsNumber {
 		log.Fatal("Usage: readt filepath")
 	}
 
