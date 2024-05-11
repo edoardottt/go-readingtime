@@ -17,6 +17,7 @@ import (
 
 // https://www.sciencedirect.com/science/article/abs/pii/S0749596X19300786.
 const (
+	Version         = "0.0.4"
 	wpm             = 238
 	billion         = 1e9
 	secondsInMinute = 60
