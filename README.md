@@ -88,4 +88,4 @@ License 📝
 -------
 
 This repository is under [MIT License](https://github.com/edoardottt/go-readingtime/blob/main/LICENSE).  
-[edoardoottavianelli.it](https://www.edoardoottavianelli.it) to contact me.
+[edoardottt.com](https://edoardottt.com/) to contact me.
