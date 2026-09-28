@@ -2,21 +2,12 @@
   go-readingtime
   <br>
 </h1>
-
 <h4 align="center">Estimate how long it takes to read a text</h4>
-
 <h6 align="center"> Coded with 💙 by edoardottt </h6>
-
 <p align="center">
-
   <a href="https://github.com/edoardottt/go-readingtime/actions">
       <img src="https://github.com/edoardottt/go-readingtime/actions/workflows/go.yml/badge.svg" alt="go action">
   </a>
-
-  <a href="https://goreportcard.com/report/github.com/edoardottt/go-readingtime">
-      <img src="https://goreportcard.com/badge/github.com/edoardottt/go-readingtime" alt="go report card">
-  </a>
-
 <p align="center">
   <a href="#install-">Install</a> •
   <a href="#usage-">Usage</a> •
